@@ -25,6 +25,11 @@ export default function getNotes() {
 }
 
 
+export function getNoteById(noteId: number) {
+    return notes.find(note => note.id === noteId)
+}
+
+
 export function addNote(content: string, important: boolean) {
     notes.push({
         id: nextId++,
