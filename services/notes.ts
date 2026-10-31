@@ -37,3 +37,11 @@ export function addNote(content: string, important: boolean) {
         important
     })
 }
+
+
+export function toggleImportance(noteId: number) {
+    const note = notes.find(note => note.id === noteId)
+    if (note) {
+        note.important = !note.important
+    }
+}
